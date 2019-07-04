@@ -1,0 +1,111 @@
+body{
+    background-color: pink;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                         'header section second div'
+                         'footer footer footer footer';
+    grid-template-rows: 20vh 70vh 65vh;
+}
+header{
+    grid-area: header;
+    background-color: #FFD9D8;
+}
+
+header, section, .second, div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    
+}
+
+nav{
+    grid-area: nav;
+    background-color: #F0948A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    color: #FFEFF0;
+    font-size: 16pt;
+}
+
+nav a:hover{
+color: black;
+transition: 2s;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+section{
+    grid-area: section;
+    background-color: #F7B5AF;
+}
+.second{
+    grid-area: second;
+    background-color: #FFD9D8;
+}
+div{
+    grid-area: div;
+    background-color: #F7B5AF;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    background-color: #FF6F61;
+
+}
+
+.rodape img{
+    width: 150px;
+    height: 150px; 
+}
+.rodape{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Amatic SC', cursive;
+    background-color: #FF6F61;
+
+}
+@media (max-width: 768px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header section section'
+                             'second second div div'
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 70vh;
+    }
+
+    nav a{
+        display: none;
+    }
+}
+@media (max-width: 425px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header header header'
+                             'section section section section'
+                             'second second second second'
+                             'div div div div'
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 70vh 40vh 40vh;
+    }
+    
+    nav a{
+        display: none;
+    }
+}
+
